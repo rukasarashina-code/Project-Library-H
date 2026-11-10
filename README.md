@@ -6,8 +6,6 @@ Sistem Informasi Perpustakaan Digital Mini berbasis **PHP Native + MySQL (mysqli
 |---|---|
 | **Nama** | Ahmad Rafiq Hakim |
 | **NPM** | 2513020081 |
-| **Mata Kuliah** | Pemrograman Web |
-| **Program Studi** | Sistem Informasi |
 
 ## Video Demo
 
