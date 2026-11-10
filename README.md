@@ -73,7 +73,7 @@ shelfwise-library/
 Screenshot
 
 Halaman	Screenshot
-Login	![Login](docs/Screenshot login.png)
+Login	![Login](docs/Screenshotlogin.png)
 Dashboard (Read)	![Dashboard](docs/ScreenshotDasboard.png)
 Dashboard Dark (Read)	![Dashboard](docs/ScreenshotDasboardDark.png)
 Tambah Buku (Create)	![Tambah](docs/ScreenshotTambah.png)
