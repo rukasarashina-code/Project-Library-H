@@ -1,0 +1,133 @@
+/* ============ Shelfwise Library (tampilan awal) ============ */
+:root, [data-bs-theme="light"] {
+  --sw-primary: #4f46e5;
+  --sw-dark: #1e1b4b;
+  --sw-bg: #f4f5fb;
+  --sw-card-bg: #ffffff;
+  --sw-card-shadow: 0 4px 18px rgba(30, 27, 75, .08);
+  --sw-thead: #f1f2f8;
+}
+[data-bs-theme="dark"] {
+  --sw-bg: #0f1020;
+  --sw-card-bg: #1a1b30;
+  --sw-card-shadow: 0 4px 18px rgba(0, 0, 0, .45);
+  --sw-thead: #24253f;
+}
+
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+  --bs-body-bg: #0f1020;
+  --bs-body-bg-rgb: 15, 16, 32;
+  --bs-body-color: #e6e7f7;
+  --bs-body-color-rgb: 230, 231, 247;
+  --bs-secondary-color: rgba(230, 231, 247, .7);
+  --bs-border-color: #33344f;
+  --bs-tertiary-bg: #24253f;
+}
+[data-bs-theme="dark"] .modal-content { background: var(--sw-card-bg); color: var(--bs-body-color); }
+[data-bs-theme="dark"] .form-control, [data-bs-theme="dark"] .form-select,
+[data-bs-theme="dark"] .input-group-text { background-color: #12132a; color: #e6e7f7; border-color: #33344f; }
+[data-bs-theme="dark"] .table > :not(caption) > * > * { color: var(--bs-body-color); border-bottom-color: #2b2c47; }
+[data-bs-theme="dark"] .table tbody tr:hover { background: rgba(129,140,248,.08); }
+[data-bs-theme="dark"] .badge-kat { background: rgba(129,140,248,.2); color: #c7d2fe; border-color: rgba(129,140,248,.4); }
+[data-bs-theme="dark"] .btn-secondary { background: #33344f; border-color: #33344f; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 500;            /* minimal Medium agar tidak tipis */
+  background-color: var(--sw-bg);
+  color: var(--bs-body-color);
+}
+small, .small { font-size: .9rem; }
+.form-label { font-weight: 600; }
+body, .card, .navbar { transition: background-color .3s, color .3s; }
+
+/* ---------- Navbar (menyamping dalam satu baris) ---------- */
+.sw-navbar { background: linear-gradient(90deg, var(--sw-dark), var(--sw-primary)); padding: .9rem 0; }
+.sw-nav-inner { display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.sw-navbar .navbar-brand { font-weight: 800; font-size: 1.35rem; margin: 0; white-space: nowrap; }
+.nav-actions { display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; gap: 1rem; color: #fff; white-space: nowrap; }
+.nav-actions .user { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; }
+.nav-actions .user i { font-size: 1.35rem; }
+.nav-actions .divider { width: 1px; height: 28px; background: rgba(255,255,255,.35); flex-shrink: 0; }
+.btn-logout { font-weight: 700; padding: .4rem 1rem; display: inline-flex; align-items: center; gap: .4rem; }
+
+/* Switch dark mode */
+.theme-switch { margin: 0; cursor: pointer; display: inline-flex; }
+.theme-switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+.theme-switch .track { position: relative; width: 66px; height: 34px; border-radius: 50rem; display: flex; align-items: center;
+  justify-content: space-between; padding: 0 9px; background: rgba(255,255,255,.22); border: 1px solid rgba(255,255,255,.55);
+  transition: background .3s; font-size: .9rem; }
+.theme-switch .sun { color: #fde047; } .theme-switch .moon { color: #e0e7ff; }
+.theme-switch .knob { position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%; background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.35); transition: transform .3s cubic-bezier(.4,1.4,.6,1); }
+.theme-switch input:checked + .track { background: rgba(15,16,32,.55); }
+.theme-switch input:checked + .track .knob { transform: translateX(32px); }
+.theme-switch input:focus-visible + .track { outline: 3px solid rgba(255,255,255,.7); outline-offset: 2px; }
+
+/* Layar kecil: tetap satu baris, teks diringkas jadi ikon */
+@media (max-width: 575.98px) {
+  .sw-navbar .navbar-brand { font-size: 1.1rem; }
+  .nav-actions { gap: .6rem; }
+  .nav-actions .user-text, .logout-text { display: none; }
+  .btn-logout { padding: .4rem .6rem; }
+  .theme-switch .track { width: 58px; }
+  .theme-switch input:checked + .track .knob { transform: translateX(24px); }
+}
+
+/* ---------- Footer (di dasar halaman) ---------- */
+.sw-footer { background: var(--sw-card-bg); border-top: 3px solid var(--sw-primary); color: var(--bs-secondary-color);
+  text-align: center; font-weight: 600; font-size: .92rem; padding: 1.25rem 0; margin-top: 2rem; }
+
+/* ---------- Card, tombol, tabel ---------- */
+.card { background: var(--sw-card-bg); border: 0; border-radius: 1rem; box-shadow: var(--sw-card-shadow); }
+.stat-card { transition: transform .25s, box-shadow .25s; }
+.stat-card:hover { transform: translateY(-4px); }
+.stat-card .icon { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; font-size: 1.5rem; }
+.btn { font-weight: 600; transition: transform .2s, box-shadow .2s, background-color .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--sw-primary); border-color: var(--sw-primary); }
+.btn-primary:hover { background: #4338ca; border-color: #4338ca; }
+
+.table { --bs-table-bg: transparent; font-weight: 500; }
+.table thead th { background: var(--sw-thead); text-transform: uppercase; letter-spacing: .5px; font-weight: 800; font-size: .85rem; white-space: nowrap; }
+.table > :not(caption) > * > * { vertical-align: middle; }
+.table tbody tr { animation: rowIn .4s ease both; }
+
+.badge { font-weight: 700; font-size: .85rem; padding: .5em .95em; border-radius: 50rem !important; }
+.badge-kat { background: rgba(79,70,229,.12); color: var(--bs-primary-text-emphasis); border: 1px solid rgba(79,70,229,.25); }
+
+.cover-thumb { width: 48px; height: 66px; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+.cover-placeholder { width: 48px; height: 66px; border-radius: 6px; background: rgba(148,163,184,.25); display: grid; place-items: center; color: #9ca3af; }
+.cover-preview { max-height: 220px; border-radius: .75rem; box-shadow: 0 4px 12px rgba(0,0,0,.2); }
+
+/* ---------- Modal hapus ---------- */
+.modal.fade .modal-dialog { transform: scale(.9) translateY(16px); transition: transform .28s ease, opacity .2s; }
+.modal.show .modal-dialog { transform: none; }
+.delete-modal { border: 0; border-radius: 1.2rem; overflow: hidden; }
+.delete-modal .top-bar { height: 5px; background: #ef4444; }
+.warn-icon { width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; font-size: 2.8rem;
+  color: #f59e0b; background: rgba(245,158,11,.14); border: 3px solid #f59e0b; animation: pop .5s ease both; }
+
+/* ---------- Animasi ---------- */
+.fade-up { animation: fadeUp .55s ease both; }
+.d2 { animation-delay: .12s; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes rowIn  { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: none; } }
+@keyframes pop    { 0% { transform: scale(.4); } 70% { transform: scale(1.1); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* ---------- Halaman login (tampilan awal) ---------- */
+.login-wrap { min-height: 100vh; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--sw-dark), var(--sw-primary) 60%, #818cf8); padding: 1rem; }
+.login-card { width: 100%; max-width: 420px; color: #1e1b4b;
+  background: rgba(255, 255, 255, .55) !important;           /* agak transparan */
+  backdrop-filter: blur(14px) saturate(150%); -webkit-backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, .55);
+  box-shadow: 0 12px 40px rgba(30, 27, 75, .35); }
+.login-card .text-muted { color: #3b3a63 !important; }
+.login-card .form-label { color: #1e1b4b; }
+.login-card .form-control, .login-card .input-group-text { background: rgba(255,255,255,.7); border-color: rgba(79,70,229,.25); }
+.login-card .btn-outline-secondary { background: rgba(255,255,255,.7); border-color: rgba(79,70,229,.25); color: #3b3a63; }
+.login-card .btn-outline-secondary:hover { background: #fff; color: var(--sw-primary); transform: none; }
+.login-card h3 { font-weight: 800; }
