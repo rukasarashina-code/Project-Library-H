@@ -44,3 +44,42 @@ PHP 8.1+ (Native) · MySQL/MariaDB · mysqli · Bootstrap 5 · JavaScript
 2. Clone repo ke folder `htdocs`:
    ```bash
    git clone <url-repo-anda> shelfwise-library
+3. Buka phpMyAdmin → Import file db_perpustakaan.sql (otomatis membuat database db_perpustakaan).
+4. Sesuaikan kredensial di config/koneksi.php bila perlu.
+5. Buka http://localhost/shelfwise-library/.
+   git clone <url-repo-anda> shelfwise-library
+
+   Akun demo: username admin · password password
+
+shelfwise-library/
+├── config/koneksi.php        # Koneksi MySQL
+├── includes/
+│   ├── auth.php              # Session & proteksi halaman
+│   ├── helpers.php           # Escape, flash, CSRF, upload, validasi, label status
+│   ├── header.php            # Layout atas (navbar)
+│   └── footer.php            # Layout bawah
+├── assets/css/style.css
+├── assets/js/app.js
+├── uploads/                  # Sampul buku
+├── index.php                 # Halaman login
+├── proses_login.php          # Autentikasi + Session/Cookie
+├── logout.php                # Hapus Session & Cookie
+├── dashboard.php             # Read + menu
+├── tambah_buku.php           # Form tambah
+├── proses_tambah.php         # Insert + upload
+├── edit_buku.php             # Form edit
+├── proses_edit.php           # Update + ganti file
+├── hapus_buku.php            # Delete + unlink file
+└── db_perpustakaan.sql       # Ekspor database
+
+Screenshot
+
+Halaman	Screenshot
+Login	![Login](docs/Screenshot 2026-11-10 at 9.16.21 PM.png)
+Dashboard (Read)	![Dashboard](docs/Screenshot 2026-11-10 at 9.16.33 PM.png)
+Dashboard Dark (Read)	![Dashboard](docs/Screenshot 2026-11-10 at 9.16.41 PM.png)
+Tambah Buku (Create)	![Tambah](docs/Screenshot 2026-11-10 at 9.20.12 PM.png)
+Edit Buku (Update)	![Edit](docs/Screenshot 2026-11-10 at 9.18.04 PM.png)
+Konfirmasi Hapus (Delete)	![Hapus](docs/Screenshot 2026-11-10 at 9.18.22 PM.png)
+Phpmyadmin (Database) ![Databse](docs/Screenshot 2026-11-10 at 9.21.06 PM.png)
+
