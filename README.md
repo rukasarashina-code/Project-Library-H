@@ -74,10 +74,10 @@ Screenshot
 
 Halaman	Screenshot
 Login	![Login](docs/Screenshot login.png)
-Dashboard (Read)	![Dashboard](docs/Screenshot Dasboard.png)
-Dashboard Dark (Read)	![Dashboard](docs/Screenshot Dasboard Dark.png)
-Tambah Buku (Create)	![Tambah](docs/Screenshot Tambah.png)
-Edit Buku (Update)	![Edit](docs/Screenshot Edit.png)
-Konfirmasi Hapus (Delete)	![Hapus](docs/Screenshot Delete.png)
-Phpmyadmin (Database) ![Database](docs/Screenshot Database.png)
+Dashboard (Read)	![Dashboard](docs/ScreenshotDasboard.png)
+Dashboard Dark (Read)	![Dashboard](docs/ScreenshotDasboardDark.png)
+Tambah Buku (Create)	![Tambah](docs/ScreenshotTambah.png)
+Edit Buku (Update)	![Edit](docs/ScreenshotEdit.png)
+Konfirmasi Hapus (Delete)	![Hapus](docs/ScreenshotDelete.png)
+Phpmyadmin (Database) ![Database](docs/ScreenshotDatabase.png)
 
