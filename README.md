@@ -73,11 +73,11 @@ shelfwise-library/
 Screenshot
 
 Halaman	Screenshot
-Login	![Login](docs/Screenshot 2026-11-10 at 9.16.21 PM.png)
-Dashboard (Read)	![Dashboard](docs/Screenshot 2026-11-10 at 9.16.33 PM.png)
-Dashboard Dark (Read)	![Dashboard](docs/Screenshot 2026-11-10 at 9.16.41 PM.png)
-Tambah Buku (Create)	![Tambah](docs/Screenshot 2026-11-10 at 9.20.12 PM.png)
-Edit Buku (Update)	![Edit](docs/Screenshot 2026-11-10 at 9.18.04 PM.png)
-Konfirmasi Hapus (Delete)	![Hapus](docs/Screenshot 2026-11-10 at 9.18.22 PM.png)
-Phpmyadmin (Database) ![Databse](docs/Screenshot 2026-11-10 at 9.21.06 PM.png)
+Login	![Login](docs/Screenshot login.png)
+Dashboard (Read)	![Dashboard](docs/Screenshot Dasboard.png)
+Dashboard Dark (Read)	![Dashboard](docs/Screenshot Dasboard Dark.png)
+Tambah Buku (Create)	![Tambah](docs/Screenshot Tambah.png)
+Edit Buku (Update)	![Edit](docs/Screenshot Edit.png)
+Konfirmasi Hapus (Delete)	![Hapus](docs/Screenshot Delete.png)
+Phpmyadmin (Database) ![Database](docs/Screenshot Database.png)
 
